@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelButtons = new System.Windows.Forms.Panel();
-            this.btnNota = new System.Windows.Forms.Button();
-            this.btnMember = new System.Windows.Forms.Button();
-            this.btnPending = new System.Windows.Forms.Button();
-            this.btnFoto = new System.Windows.Forms.Button();
             this.groupBoxInfo = new System.Windows.Forms.GroupBox();
             this.lblKasirNo = new System.Windows.Forms.Label();
             this.txtKasirNo = new System.Windows.Forms.TextBox();
@@ -46,6 +41,11 @@
             this.txtNilaiTerhemat = new System.Windows.Forms.TextBox();
             this.lblStokTerakhir = new System.Windows.Forms.Label();
             this.txtStokTerakhir = new System.Windows.Forms.TextBox();
+            this.panelButtons = new System.Windows.Forms.Panel();
+            this.btnNota = new System.Windows.Forms.Button();
+            this.btnMember = new System.Windows.Forms.Button();
+            this.btnPending = new System.Windows.Forms.Button();
+            this.btnFoto = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Kode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,60 +61,16 @@
             this.lblHarga = new System.Windows.Forms.Label();
             this.txtHarga = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.panelButtons.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBoxInfo.SuspendLayout();
+            this.panelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelButtons
-            // 
-            this.panelButtons.Controls.Add(this.btnNota);
-            this.panelButtons.Controls.Add(this.btnMember);
-            this.panelButtons.Controls.Add(this.btnPending);
-            this.panelButtons.Location = new System.Drawing.Point(12, 320);
-            this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(400, 40);
-            this.panelButtons.TabIndex = 0;
-            // 
-            // btnNota
-            // 
-            this.btnNota.Location = new System.Drawing.Point(9, 3);
-            this.btnNota.Name = "btnNota";
-            this.btnNota.Size = new System.Drawing.Size(75, 23);
-            this.btnNota.TabIndex = 0;
-            this.btnNota.Text = "Nota";
-            this.btnNota.UseVisualStyleBackColor = true;
-            this.btnNota.Click += new System.EventHandler(this.btnNota_Click);
-            // 
-            // btnMember
-            // 
-            this.btnMember.Location = new System.Drawing.Point(90, 3);
-            this.btnMember.Name = "btnMember";
-            this.btnMember.Size = new System.Drawing.Size(75, 23);
-            this.btnMember.TabIndex = 1;
-            this.btnMember.Text = "Member";
-            this.btnMember.UseVisualStyleBackColor = true;
-            this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
-            // 
-            // btnPending
-            // 
-            this.btnPending.Location = new System.Drawing.Point(171, 3);
-            this.btnPending.Name = "btnPending";
-            this.btnPending.Size = new System.Drawing.Size(75, 23);
-            this.btnPending.TabIndex = 2;
-            this.btnPending.Text = "Pending";
-            this.btnPending.UseVisualStyleBackColor = true;
-            this.btnPending.Click += new System.EventHandler(this.btnPending_Click);
-            // 
-            // btnFoto
-            // 
-            this.btnFoto.Location = new System.Drawing.Point(243, 0);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(75, 23);
-            this.btnFoto.TabIndex = 3;
-            this.btnFoto.Text = "Foto";
-            this.btnFoto.UseVisualStyleBackColor = true;
-            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // groupBoxInfo
             // 
@@ -130,18 +86,16 @@
             this.groupBoxInfo.Controls.Add(this.txtNilaiTerhemat);
             this.groupBoxInfo.Controls.Add(this.lblStokTerakhir);
             this.groupBoxInfo.Controls.Add(this.txtStokTerakhir);
-            this.groupBoxInfo.Controls.Add(this.btnFoto);
             this.groupBoxInfo.Location = new System.Drawing.Point(12, 12);
             this.groupBoxInfo.Name = "groupBoxInfo";
-            this.groupBoxInfo.Size = new System.Drawing.Size(200, 320);
+            this.groupBoxInfo.Size = new System.Drawing.Size(220, 300);
             this.groupBoxInfo.TabIndex = 0;
             this.groupBoxInfo.TabStop = false;
-            this.groupBoxInfo.Enter += new System.EventHandler(this.groupBoxInfo_Enter);
             // 
             // lblKasirNo
             // 
             this.lblKasirNo.AutoSize = true;
-            this.lblKasirNo.Location = new System.Drawing.Point(6, 20);
+            this.lblKasirNo.Location = new System.Drawing.Point(10, 20);
             this.lblKasirNo.Name = "lblKasirNo";
             this.lblKasirNo.Size = new System.Drawing.Size(50, 13);
             this.lblKasirNo.TabIndex = 1;
@@ -149,15 +103,15 @@
             // 
             // txtKasirNo
             // 
-            this.txtKasirNo.Location = new System.Drawing.Point(80, 17);
+            this.txtKasirNo.Location = new System.Drawing.Point(90, 17);
             this.txtKasirNo.Name = "txtKasirNo";
-            this.txtKasirNo.Size = new System.Drawing.Size(100, 20);
+            this.txtKasirNo.Size = new System.Drawing.Size(120, 20);
             this.txtKasirNo.TabIndex = 2;
             // 
             // lblKasir
             // 
             this.lblKasir.AutoSize = true;
-            this.lblKasir.Location = new System.Drawing.Point(6, 50);
+            this.lblKasir.Location = new System.Drawing.Point(10, 50);
             this.lblKasir.Name = "lblKasir";
             this.lblKasir.Size = new System.Drawing.Size(30, 13);
             this.lblKasir.TabIndex = 3;
@@ -165,15 +119,15 @@
             // 
             // txtKasir
             // 
-            this.txtKasir.Location = new System.Drawing.Point(80, 47);
+            this.txtKasir.Location = new System.Drawing.Point(90, 47);
             this.txtKasir.Name = "txtKasir";
-            this.txtKasir.Size = new System.Drawing.Size(100, 20);
+            this.txtKasir.Size = new System.Drawing.Size(120, 20);
             this.txtKasir.TabIndex = 4;
             // 
             // lblNota
             // 
             this.lblNota.AutoSize = true;
-            this.lblNota.Location = new System.Drawing.Point(6, 80);
+            this.lblNota.Location = new System.Drawing.Point(10, 80);
             this.lblNota.Name = "lblNota";
             this.lblNota.Size = new System.Drawing.Size(50, 13);
             this.lblNota.TabIndex = 5;
@@ -181,15 +135,15 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(80, 77);
+            this.txtNota.Location = new System.Drawing.Point(90, 77);
             this.txtNota.Name = "txtNota";
-            this.txtNota.Size = new System.Drawing.Size(100, 20);
+            this.txtNota.Size = new System.Drawing.Size(120, 20);
             this.txtNota.TabIndex = 6;
             // 
             // lblTanggal
             // 
             this.lblTanggal.AutoSize = true;
-            this.lblTanggal.Location = new System.Drawing.Point(6, 110);
+            this.lblTanggal.Location = new System.Drawing.Point(10, 110);
             this.lblTanggal.Name = "lblTanggal";
             this.lblTanggal.Size = new System.Drawing.Size(46, 13);
             this.lblTanggal.TabIndex = 7;
@@ -197,15 +151,15 @@
             // 
             // txtTanggal
             // 
-            this.txtTanggal.Location = new System.Drawing.Point(80, 107);
+            this.txtTanggal.Location = new System.Drawing.Point(90, 107);
             this.txtTanggal.Name = "txtTanggal";
-            this.txtTanggal.Size = new System.Drawing.Size(100, 20);
+            this.txtTanggal.Size = new System.Drawing.Size(120, 20);
             this.txtTanggal.TabIndex = 8;
             // 
             // lblNilaiTerhemat
             // 
             this.lblNilaiTerhemat.AutoSize = true;
-            this.lblNilaiTerhemat.Location = new System.Drawing.Point(6, 140);
+            this.lblNilaiTerhemat.Location = new System.Drawing.Point(10, 140);
             this.lblNilaiTerhemat.Name = "lblNilaiTerhemat";
             this.lblNilaiTerhemat.Size = new System.Drawing.Size(75, 13);
             this.lblNilaiTerhemat.TabIndex = 9;
@@ -213,15 +167,15 @@
             // 
             // txtNilaiTerhemat
             // 
-            this.txtNilaiTerhemat.Location = new System.Drawing.Point(80, 137);
+            this.txtNilaiTerhemat.Location = new System.Drawing.Point(90, 137);
             this.txtNilaiTerhemat.Name = "txtNilaiTerhemat";
-            this.txtNilaiTerhemat.Size = new System.Drawing.Size(100, 20);
+            this.txtNilaiTerhemat.Size = new System.Drawing.Size(120, 20);
             this.txtNilaiTerhemat.TabIndex = 10;
             // 
             // lblStokTerakhir
             // 
             this.lblStokTerakhir.AutoSize = true;
-            this.lblStokTerakhir.Location = new System.Drawing.Point(6, 170);
+            this.lblStokTerakhir.Location = new System.Drawing.Point(10, 170);
             this.lblStokTerakhir.Name = "lblStokTerakhir";
             this.lblStokTerakhir.Size = new System.Drawing.Size(71, 13);
             this.lblStokTerakhir.TabIndex = 11;
@@ -229,9 +183,9 @@
             // 
             // txtStokTerakhir
             // 
-            this.txtStokTerakhir.Location = new System.Drawing.Point(80, 167);
+            this.txtStokTerakhir.Location = new System.Drawing.Point(90, 167);
             this.txtStokTerakhir.Name = "txtStokTerakhir";
-            this.txtStokTerakhir.Size = new System.Drawing.Size(100, 20);
+            this.txtStokTerakhir.Size = new System.Drawing.Size(120, 20);
             this.txtStokTerakhir.TabIndex = 12;
             // 
             // dataGridView1
@@ -243,9 +197,9 @@
             this.Qty,
             this.Harga,
             this.SubTotal});
-            this.dataGridView1.Location = new System.Drawing.Point(230, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(250, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(550, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 150);
             this.dataGridView1.TabIndex = 8;
             // 
             // Kode
@@ -271,7 +225,7 @@
             // lblKode
             // 
             this.lblKode.AutoSize = true;
-            this.lblKode.Location = new System.Drawing.Point(230, 170);
+            this.lblKode.Location = new System.Drawing.Point(250, 170);
             this.lblKode.Name = "lblKode";
             this.lblKode.Size = new System.Drawing.Size(32, 13);
             this.lblKode.TabIndex = 9;
@@ -279,7 +233,7 @@
             // 
             // txtKode
             // 
-            this.txtKode.Location = new System.Drawing.Point(280, 167);
+            this.txtKode.Location = new System.Drawing.Point(300, 167);
             this.txtKode.Name = "txtKode";
             this.txtKode.Size = new System.Drawing.Size(100, 20);
             this.txtKode.TabIndex = 10;
@@ -287,7 +241,7 @@
             // lblItem
             // 
             this.lblItem.AutoSize = true;
-            this.lblItem.Location = new System.Drawing.Point(230, 200);
+            this.lblItem.Location = new System.Drawing.Point(250, 200);
             this.lblItem.Name = "lblItem";
             this.lblItem.Size = new System.Drawing.Size(27, 13);
             this.lblItem.TabIndex = 11;
@@ -295,7 +249,7 @@
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(280, 197);
+            this.txtItem.Location = new System.Drawing.Point(300, 197);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(100, 20);
             this.txtItem.TabIndex = 12;
@@ -303,7 +257,7 @@
             // lblQty
             // 
             this.lblQty.AutoSize = true;
-            this.lblQty.Location = new System.Drawing.Point(230, 230);
+            this.lblQty.Location = new System.Drawing.Point(250, 230);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(23, 13);
             this.lblQty.TabIndex = 13;
@@ -311,7 +265,7 @@
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(280, 227);
+            this.txtQty.Location = new System.Drawing.Point(300, 227);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(100, 20);
             this.txtQty.TabIndex = 14;
@@ -319,7 +273,7 @@
             // lblHarga
             // 
             this.lblHarga.AutoSize = true;
-            this.lblHarga.Location = new System.Drawing.Point(230, 260);
+            this.lblHarga.Location = new System.Drawing.Point(250, 260);
             this.lblHarga.Name = "lblHarga";
             this.lblHarga.Size = new System.Drawing.Size(36, 13);
             this.lblHarga.TabIndex = 15;
@@ -327,7 +281,7 @@
             // 
             // txtHarga
             // 
-            this.txtHarga.Location = new System.Drawing.Point(280, 257);
+            this.txtHarga.Location = new System.Drawing.Point(300, 257);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(100, 20);
             this.txtHarga.TabIndex = 16;
@@ -335,7 +289,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(230, 290);
+            this.lblTotal.Location = new System.Drawing.Point(250, 290);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(34, 13);
             this.lblTotal.TabIndex = 18;
@@ -346,7 +300,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelButtons);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtHarga);
             this.Controls.Add(this.lblHarga);
@@ -361,7 +315,6 @@
             this.Name = "Form1";
             this.Text = "CahyaFy";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panelButtons.ResumeLayout(false);
             this.groupBoxInfo.ResumeLayout(false);
             this.groupBoxInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -369,11 +322,8 @@
             this.PerformLayout();
 
         }
-        private System.Windows.Forms.Panel panelButtons;
-        private System.Windows.Forms.Button btnNota;
-        private System.Windows.Forms.Button btnMember;
-        private System.Windows.Forms.Button btnPending;
-        private System.Windows.Forms.Button btnFoto;
+
+        // Deklarasi komponen
         private System.Windows.Forms.GroupBox groupBoxInfo;
         private System.Windows.Forms.Label lblKasirNo;
         private System.Windows.Forms.TextBox txtKasirNo;
