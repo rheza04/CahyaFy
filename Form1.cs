@@ -8,63 +8,54 @@ namespace CahyaFy
         public Form1()
         {
             InitializeComponent();
+            InitializeCustomComponents();
         }
 
-        private void btnNota_Click(object sender, EventArgs e)
+        private void InitializeCustomComponents()
         {
-            // Implementasi untuk tombol Nota
-            MessageBox.Show("Tombol Nota diklik");
-        }
-
-        private void btnMember_Click(object sender, EventArgs e)
-        {
-            // Implementasi untuk tombol Member
-            MessageBox.Show("Tombol Member diklik");
-        }
-
-        private void btnPending_Click(object sender, EventArgs e)
-        {
-            // Implementasi untuk tombol Pending
-            MessageBox.Show("Tombol Pending diklik");
-        }
-
-        private void btnFoto_Click(object sender, EventArgs e)
-        {
-            // Implementasi untuk tombol Foto
-            MessageBox.Show("Tombol Foto diklik");
+            // Add event handlers for any necessary events
+            this.Load += new EventHandler(Form1_Load);
+            this.txtKasirNo.TextChanged += new EventHandler(txtKasirNo_TextChanged);
+            this.txtKasir.TextChanged += new EventHandler(txtKasir_TextChanged);
+            this.txtNotaNo.TextChanged += new EventHandler(txtNotaNo_TextChanged);
+            this.txtTanggal.TextChanged += new EventHandler(txtTanggal_TextChanged);
+            this.txtNilaiTerhemat.TextChanged += new EventHandler(txtNilaiTerhemat_TextChanged);
+            this.txtStokTerakhir.TextChanged += new EventHandler(txtStokTerakhir_TextChanged);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Set tanggal dan waktu saat ini
-            txtTanggal.Text = DateTime.Now.ToString("dd MMM yyyy HH:mm:ss");
+            // Load initial data or settings
         }
 
-        private void btnTambahItem_Click(object sender, EventArgs e)
+        private void txtKasirNo_TextChanged(object sender, EventArgs e)
         {
-            // Contoh data item
-            string kode = txtKode.Text;
-            string item = txtItem.Text;
-            int qty = int.Parse(txtQty.Text);
-            decimal harga = decimal.Parse(txtHarga.Text);
-            decimal subtotal = qty * harga;
-
-            // Tambahkan item ke DataGridView
-            dataGridView1.Rows.Add(kode, item, qty, harga, subtotal);
-
-            // Hitung total
-            decimal total = 0;
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                total += Convert.ToDecimal(row.Cells["SubTotal"].Value);
-            }
-
-            lblTotal.Text = "Total: " + total.ToString("N0");
+            // Handle text change event for txtKasirNo
         }
 
-        private void groupBoxInfo_Enter(object sender, EventArgs e)
+        private void txtKasir_TextChanged(object sender, EventArgs e)
         {
+            // Handle text change event for txtKasir
+        }
 
+        private void txtNotaNo_TextChanged(object sender, EventArgs e)
+        {
+            // Handle text change event for txtNotaNo
+        }
+
+        private void txtTanggal_TextChanged(object sender, EventArgs e)
+        {
+            // Handle text change event for txtTanggal
+        }
+
+        private void txtNilaiTerhemat_TextChanged(object sender, EventArgs e)
+        {
+            // Handle text change event for txtNilaiTerhemat
+        }
+
+        private void txtStokTerakhir_TextChanged(object sender, EventArgs e)
+        {
+            // Handle text change event for txtStokTerakhir
         }
     }
 }
