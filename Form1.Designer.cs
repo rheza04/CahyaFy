@@ -85,6 +85,7 @@ namespace CahyaFy
             this.lblQty = new System.Windows.Forms.Label();
             this.lblHarga = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageNota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -92,11 +93,12 @@ namespace CahyaFy
             // 
             // tabControl
             // 
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControl.Controls.Add(this.tabPageNota);
             this.tabControl.Controls.Add(this.tabPageMember);
             this.tabControl.Controls.Add(this.tabPagePending);
             this.tabControl.Controls.Add(this.tabPageFoto);
-            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Location = new System.Drawing.Point(12, 40);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(250, 250);
@@ -116,7 +118,7 @@ namespace CahyaFy
             this.tabPageNota.Controls.Add(this.lblTanggal);
             this.tabPageNota.Controls.Add(this.lblNilaiTerhemat);
             this.tabPageNota.Controls.Add(this.lblStokTerakhir);
-            this.tabPageNota.Location = new System.Drawing.Point(4, 22);
+            this.tabPageNota.Location = new System.Drawing.Point(4, 4);
             this.tabPageNota.Name = "tabPageNota";
             this.tabPageNota.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageNota.Size = new System.Drawing.Size(242, 224);
@@ -222,7 +224,7 @@ namespace CahyaFy
             // 
             // tabPageMember
             // 
-            this.tabPageMember.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMember.Location = new System.Drawing.Point(4, 4);
             this.tabPageMember.Name = "tabPageMember";
             this.tabPageMember.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageMember.Size = new System.Drawing.Size(242, 224);
@@ -232,7 +234,7 @@ namespace CahyaFy
             // 
             // tabPagePending
             // 
-            this.tabPagePending.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePending.Location = new System.Drawing.Point(4, 4);
             this.tabPagePending.Name = "tabPagePending";
             this.tabPagePending.Padding = new System.Windows.Forms.Padding(3);
             this.tabPagePending.Size = new System.Drawing.Size(242, 224);
@@ -242,7 +244,7 @@ namespace CahyaFy
             // 
             // tabPageFoto
             // 
-            this.tabPageFoto.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFoto.Location = new System.Drawing.Point(4, 4);
             this.tabPageFoto.Name = "tabPageFoto";
             this.tabPageFoto.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageFoto.Size = new System.Drawing.Size(242, 224);
@@ -281,7 +283,7 @@ namespace CahyaFy
             // 
             // txtHarga
             // 
-            this.txtHarga.Location = new System.Drawing.Point(350, 270);
+            this.txtHarga.Location = new System.Drawing.Point(245, 324);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(100, 20);
             this.txtHarga.TabIndex = 16;
@@ -325,15 +327,25 @@ namespace CahyaFy
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(280, 303);
+            this.lblTotal.Location = new System.Drawing.Point(179, 331);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 21;
             this.lblTotal.Text = "Total";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(489, 306);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "JITSHOMART";
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(906, 384);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.txtKode);
@@ -357,5 +369,7 @@ namespace CahyaFy
         }
 
         #endregion
+
+        private Label label1;
     }
 }
