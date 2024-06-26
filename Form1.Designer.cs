@@ -86,6 +86,7 @@ namespace CahyaFy
             this.lblHarga = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tabControl.SuspendLayout();
             this.tabPageNota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -342,9 +343,17 @@ namespace CahyaFy
             this.label1.TabIndex = 22;
             this.label1.Text = "JITSHOMART";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(589, 331);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 23;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(906, 384);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.dataGridView);
@@ -371,5 +380,6 @@ namespace CahyaFy
         #endregion
 
         private Label label1;
+        private MaskedTextBox maskedTextBox1;
     }
 }
